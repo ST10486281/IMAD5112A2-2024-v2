@@ -20,19 +20,17 @@ class MainActivityTest {
     }
 
     @Test
-    fun testButtonClickUpdatesTextView() {
+    fun test1() {
         activityScenario.onActivity { activity ->
-            // Set up references to UI elements
-            val button: Button = activity.findViewById(R.id.button)
-            val textView: TextView = activity.findViewById(R.id.textView)
-            val editTextText: EditText = activity.findViewById(R.id.editTextText)
+            val editText = activity.findViewById<EditText>(R.id.editTextGrams)
+            val button = activity.findViewById<Button>(R.id.nextButton)
+            val dayLabel = activity.findViewById<TextView>(R.id.dayTextView)
 
-            // Simulate user input
-            editTextText.setText("morning")
-            // Perform button click
+            editText.setText("100")
             button.performClick()
-            // Check if the TextView's text was updated
-            assertEquals("Eggs", textView.text)
+
+            // After one click, the label should now show Tuesday
+            assertTrue(dayLabel.text.contains("Tuesday"))
         }
     }
 }
