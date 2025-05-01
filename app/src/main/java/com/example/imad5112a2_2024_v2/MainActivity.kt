@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     // All days done, go to report screen
                     val intent = Intent(this, Report::class.java)
-                    intent.putExtra("daysArray", days)
                     intent.putExtra("gramsArray", grams.toIntArray()) // convert to primitive array
                     startActivity(intent)
                 }
