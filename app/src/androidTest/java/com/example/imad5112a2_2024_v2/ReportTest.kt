@@ -15,8 +15,8 @@ class ReportTest {
     fun test1() {
         val intent = Intent(Intent.ACTION_MAIN).apply {
             setClassName(
-                "com.example.imad5112a2_2024_v1",
-                "com.example.imad5112a2_2024_v1.Report"
+                "com.example.imad5112a2_2024_v2",
+                "com.example.imad5112a2_2024_v2.Report"
             )
             putExtra("daysArray", arrayOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))
             putExtra("gramsArray", intArrayOf(100, 100, 100, 100, 100, 100, 100))
